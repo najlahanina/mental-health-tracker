@@ -14,7 +14,7 @@ from django.urls import reverse
 def show_main(request):
     mood_entries = MoodEntry.objects.filter(user=request.user)
     context = {
-        'name': 'Nisa Najla Hanina Hasanah',
+        'name': request.user.username,
         'class': 'PBP A',
         'npm' : '2306240055',
         'mood_entries': mood_entries,
